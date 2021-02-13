@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
     db:
-        image: mysql:5.7
+        image: wachira90/mysql:5.7.23
         restart: always
         volumes:
             - ./db_data:/var/lib/mysql
@@ -11,7 +11,7 @@ services:
             MYSQL_DATABASE: wordpress
 
     wordpress:
-        image: wordpress
+        image: wachira90/wordpress:5.6.1-php7.4
         restart: always
         volumes:
             - ./wp_data:/var/www/html
